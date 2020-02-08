@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content="ie-edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+        <!--div class="bg-danger" :class="['p-3', 'text-white']">
+            hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh 
+        </div-->
+        <!--NOTA: CLASES SIEMPRE ENTRE COMILLAS SIMPLES Y ENTRE CORCHETES CUANDO SEA MAS DE UNA CLASE.-->
+        <div :class="['p-3', 'text-white', fondo]">
+            <p>
+                hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh 
+            </p>
+        </div>
+        <input type="text" name="" class="form-control my-3" v-model='fondo'>
+        <div class="text-white p-3" :class="{'bg-info':color, 'bg-success': !color}">
+            <!--bg-info solo cuando color sea verdadero y bg-succes cuando color sea falso-->
+            <p>
+                hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh hlkfñlkhñlk ñlklñfgjl kjlkgfhd jlkjfgdh lkjlkdthyg jkjlhgf kjlkfghjlkjlkgfh 
+            </p>
+        </div>
+        <button class="btn btn-primary" v-on:click="color = !color">Cambiar Fondo</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        const app= new Vue({
+            el:'#app',
+            data:{
+                fondo:'bg-warning',
+                color:false
+            },
+            methods:{
+
+            },
+            computed:{
+        
+            }
+        })
+    </script>
+
+</body>
+
+</html>

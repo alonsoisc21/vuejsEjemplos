@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content="ie-edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app" class="container mt-5">
+        <titulo></titulo>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--/*DEBE ESTAR SIEMPRE DESPUES DE VUE JS*/-->
+    <script src="https://unpkg.com/vuex@3.1.2/dist/vuex.js"></script>
+    <script type="text/javascript">
+        Vue.component('titulo',{
+            template:`
+               <div>
+                    <h1>numero {{numero}}</h1>
+                    <hijo></hijo>
+                </div>  
+            `,
+            computed:{
+                /*numero(){
+                    return store.state.numero
+                },*/
+                ...Vuex.mapState(['numero'
+
+                ])
+            }
+        });
+        Vue.component('hijo',{
+            template:`
+               <div>
+                    <button v-on:click="$store.commit('aumentar')">+</button>
+                    <h1>{{$store.state.numero}}</h1>
+                </div>  
+            `
+        });
+
+        const store=new Vuex.Store({
+            state:{
+                numero:10
+            },
+            mutations:{
+                /*aumentar(){
+                    this.state.numero ++
+                }*/
+                aumentar(state){
+                    state.numero ++
+                } 
+            }
+        });
+
+        new Vue({
+            el:'#app',
+            store:store
+
+        })
+    </script>
+
+</body>
+</html>

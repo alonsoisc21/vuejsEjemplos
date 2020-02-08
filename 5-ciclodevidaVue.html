@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content="ie-edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+        <h3>{{saludo}}</h3>
+        <button v-on:click="saludo='Cambio de saludo'">Cambiar</button>
+        <button v-on:click="destruir()">Destruir</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        /********************************NOTAAA: PROPIEDADES COMPUTADAS********************/
+        const app= new Vue({
+            el:'#app',
+            data:{
+                saludo:'Ciclo de vida de vue'
+            },
+            beforeCreate(){
+                /*Despues de crear el VUE*/ 
+                console.log("BEFORE CREATE");
+            },
+            created(){
+                /*Al crear los metodos, observadoresy eventos pero aun no accede al DOM*/
+                /*Aun no se puede acceder a """"el""""""*/
+                console.log("CREATED");  
+            },
+            beforeMount(){
+                /*Se ejecuta antes de integrar el DOM*/
+                console.log("BEFORE MOUNT");
+            },
+            mounted(){
+                /*Se ejecuta al integrar el DOM*/
+                console.log("MOUNTED");
+            },
+            beforeUpdate(){
+                /*Al detectar un cambio*/
+                console.log("BEFORE UPDATE");
+            },
+            updated(){
+                /*Al realizar el cambio*/
+                console.log("UPDATED");
+            },
+            beforeDestroy(){
+                /*Antes de destruir la instancia*/
+                console.log("BEFORE DESTROY");
+            },
+            destroyed(){
+                /*Se destruye toda la instancia*/
+                console.log("DESTROYED");
+            },
+            methods:{
+                destruir(){
+                    this.$destroy();
+                }
+            },
+            computed:{
+
+            },
+        })
+    </script>
+
+</body>
+
+</html>

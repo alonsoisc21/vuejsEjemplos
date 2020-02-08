@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='X-UA-Compatible' content="ie-edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+        <h3>{{saludo}}</h3>
+        <saludo></saludo>
+        <contador></contador>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        /********************************COMPONENTES********************/
+        /*NOTA:::SIempre el template debe tener un div contenedor*/
+        Vue.component('saludo',{
+            /*template:/*'<h1>SALUDO COMPONENTE</h1>'*/
+                /*'<h2>{{saludoc}}</h2>',*/
+            template:`
+                <div>
+                    <h1>SALUDO COMPONENTE</h1>
+                    <h2>{{saludoc}}</h2>
+                </div>
+            `,
+            data(){
+                return{
+                    saludoc:'HOLA DESDE VUE COMPONENTS'
+                }
+            }
+        });
+
+        Vue.component('contador',{
+            template:`
+                <div>
+                    <h1>CONTADOR</h1>
+                    <h2>{{cont}}</h2>
+                    <button v-on:click="cont++">+</button>
+                </div>
+            `,
+            data(){
+                return{
+                    cont:0
+                }
+            }
+        });
+
+
+
+
+        new Vue({
+            el:'#app',
+            data:{
+                saludo:'HOLA DESDE VUE'
+            },
+            methods:{
+
+            },
+            computed:{
+
+            },
+        })
+    </script>
+
+</body>
+
+</html>
